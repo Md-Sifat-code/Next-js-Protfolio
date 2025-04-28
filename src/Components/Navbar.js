@@ -5,11 +5,11 @@ import { IoLogoInstagram } from "react-icons/io5"; // Replaced Fiverr with Insta
 
 function Navbar() {
   return (
-    <section className="flex container mx-auto max-w-5xl justify-between items-center p-4 text-[#ccd6f6] iceland">
+    <section className="flex flex-wrap container mx-auto max-w-5xl justify-between items-center p-4 text-[#ccd6f6] iceland">
       {/* Left side: logo and navigation */}
-      <div className="flex items-center space-x-6">
+      <div className="flex items-center space-x-6 w-full sm:w-auto justify-between mb-4 sm:mb-0">
         <div className="text-xl font-semibold">MD Sifat</div>
-        <nav className="space-x-4 font-semibold">
+        <nav className="space-x-4 font-semibold hidden sm:flex">
           <a href="#home" className="hover:text-gray-400">
             Home
           </a>
@@ -65,6 +65,24 @@ function Navbar() {
         >
           <IoLogoInstagram />
         </a>
+      </div>
+
+      {/* Mobile Navigation Toggle */}
+      <div className="sm:hidden flex items-center justify-between w-full mt-4">
+        <nav className="flex space-x-4 w-full justify-center">
+          <a href="#home" className="block hover:text-gray-400">
+            Home
+          </a>
+          <a href="#projects" className="block hover:text-gray-400">
+            Projects
+          </a>
+          <a href="#about" className="block hover:text-gray-400">
+            About
+          </a>
+          <a href="#contact" className="block hover:text-gray-400">
+            Contact
+          </a>
+        </nav>
       </div>
     </section>
   );
