@@ -14,7 +14,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center bg-black text-white p-4">
+    <div className="min-h-screen flex flex-col justify-center items-center bg-black text-[#ccd6f6] p-4">
       {/* Video Section */}
       <div className="flex flex-col w-full max-w-4xl mb-10">
         <video
@@ -42,7 +42,7 @@ function Hero() {
 
         <p className="text-lg">I create stuff sometimes.</p>
 
-        <p className="max-w-2xl text-sm md:text-base text-gray-300">
+        <p className="max-w-2xl text-sm md:text-base text-[#ccd6f6]">
           I'm a software engineer from Dhaka, Bangladesh. I'm fascinated by
           large-scale, high-impact products and contributed to major feature
           launches in industry-leading services as well as web applications that

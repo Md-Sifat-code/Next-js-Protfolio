@@ -30,11 +30,12 @@ function Aboutme() {
           {/* Left Side Content */}
           <div className="col-span-2">
             <p className="text-2xl mb-4">
-              I am currently a Software Development Engineer at{" "}
-              <span className="text-teal-600">Hyperlink InfoSystem</span>,
-              working in the AWS sector under team Route 53. At the same time, I
-              am undertaking a part-time Master's of Science in Software
-              Engineering at University of Oxford.
+              I am currently a{" "}
+              <span className="font-bold">Software Development</span> Engineer
+              at <span className="text-teal-600">Hyperlink InfoSystem</span>,
+              working in the Frontend sector under team Fuji-14 . At the same
+              time, I am studying in BSC in Computer Scrience and Engineering at
+              United International University.
             </p>
 
             <h2 className="text-2xl font-semibold mb-4">
@@ -85,7 +86,8 @@ function Aboutme() {
 
             <p className="text-xl mt-6">
               Outside of work, I'm interested in following the developments of
-              science. I also play a lot of video games. And make TikToks.
+              science. I also play a lot of video games. And make Youtube
+              Videos.
             </p>
           </div>
 
