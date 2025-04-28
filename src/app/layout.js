@@ -2,7 +2,7 @@ import Navbar from "@/Components/Navbar";
 import "./globals.css";
 
 export const metadata = {
-  title: "My Next App",
+  title: "Sifat",
   description: "A modern learning platform",
 };
 
