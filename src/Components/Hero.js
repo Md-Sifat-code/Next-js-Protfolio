@@ -19,7 +19,7 @@ function Hero() {
       <div className="flex flex-col w-full max-w-4xl mb-10">
         <video
           ref={videoRef}
-          src="/intro-video.mp4" // ✅ updated file name
+          src="/intro video.mp4" // ✅ updated file name
           autoPlay
           loop
           muted
