@@ -87,7 +87,7 @@ function Aboutme() {
             </div>
 
             <p className="text-xl mt-6">
-              Outside of work, I'm interested in following the developments of
+              Outside of work, I am interested in following the developments of
               science. I also play a lot of video games and make Youtube Videos.
             </p>
           </div>

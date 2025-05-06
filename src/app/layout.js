@@ -106,15 +106,13 @@ export default function RootLayout({ children }) {
         <meta
           property="og:image"
           content="https://mdsifat.site/your-image.png"
-        />{" "}
-        {/* Replace with your image URL */}
+        />
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:image"
           content="https://mdsifat.site/your-image.png"
-        />{" "}
-        {/* Replace with your image URL */}
+        />
         {/* Apple Web App */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta

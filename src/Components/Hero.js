@@ -19,11 +19,12 @@ function Hero() {
       <div className="flex flex-col w-full max-w-4xl mb-10">
         <video
           ref={videoRef}
-          src="/intro video.mp4"
+          src="/intro-video.mp4" // ✅ updated file name
           autoPlay
           loop
           muted
           playsInline
+          aria-label="Intro background video"
           className="w-full h-auto object-cover rounded-lg"
         />
       </div>
@@ -43,14 +44,15 @@ function Hero() {
         <p className="text-lg">I create stuff sometimes.</p>
 
         <p className="max-w-2xl text-sm md:text-base text-[#ccd6f6]">
-          I'm a software engineer from Dhaka, Bangladesh. I'm fascinated by
-          large-scale, high-impact products and contributed to major feature
-          launches in industry-leading services as well as web applications that
-          have 1M+ users.
+          I&apos;m a software engineer from Dhaka, Bangladesh. I&apos;m
+          fascinated by large-scale, high-impact products and contributed to
+          major feature launches in industry-leading services as well as web
+          applications that have 1M+ users.
         </p>
 
         <a
           href="mailto:codewithsifat4@gmail.com"
+          title="Send an email to Sifat"
           className="mt-4 flex items-center gap-2 bg-teal-600 hover:bg-teal-700 text-white px-5 py-2 rounded-full transition font-bold"
         >
           <MdEmail size={20} />
