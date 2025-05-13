@@ -1,6 +1,7 @@
 import Aboutme from "@/Components/Aboutme";
 import Experience from "@/Components/Experience";
 import Hero from "@/Components/Hero";
+import Projects from "@/Components/Projects";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,6 +13,9 @@ export default function Home() {
       </div>
       <div>
         <Experience />
+      </div>
+      <div>
+        <Projects />
       </div>
     </div>
   );

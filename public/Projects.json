@@ -1,0 +1,45 @@
+{
+  "frontend": [
+    {
+      "id": 1,
+      "picture": "/project1.jpg",
+      "title": "React Website",
+      "skills": ["React", "JavaScript", "CSS"],
+      "description": "A dynamic single-page application built with React."
+    },
+    {
+      "id": 2,
+      "picture": "/project2.jpg",
+      "title": "TailwindCSS Portfolio",
+      "skills": ["TailwindCSS", "HTML", "JavaScript"],
+      "description": "A personal portfolio built using TailwindCSS."
+    }
+  ],
+  "fullstack": [
+    {
+      "id": 3,
+      "picture": "/project3.jpg",
+      "title": "MERN E-commerce",
+      "skills": ["MongoDB", "Express", "React", "Node.js"],
+      "description": "A full-stack e-commerce website built with the MERN stack."
+    }
+  ],
+  "python": [
+    {
+      "id": 4,
+      "picture": "/project4.jpg",
+      "title": "Python Data Analysis",
+      "skills": ["Python", "Pandas", "Matplotlib"],
+      "description": "Data analysis and visualization project using Python."
+    }
+  ],
+  "backend": [
+    {
+      "id": 5,
+      "picture": "/project5.jpg",
+      "title": "REST API with Node.js",
+      "skills": ["Node.js", "Express", "MongoDB"],
+      "description": "A RESTful API built using Node.js and Express."
+    }
+  ]
+}

@@ -9,12 +9,12 @@ function Experience() {
   const workExperience = (
     <div>
       <h2 className="text-2xl font-semibold">
-        Forntend Engineer @
+        Forntend Intern @
         <span className="text-teal-600">Hyperlink InfoSystem</span>
       </h2>
-      <p className="text-xl ">APR 2025 - PRESENT</p>
+      <p className="text-xl ">JAN 2025 - MAY 2025</p>
       <ul className="list-disc pl-5 mt-4">
-        <li>Working as an Frontend Engineer, Web3js Specialist.</li>
+        <li>Working as an Frontend Intern, Web3js developer.</li>
         <li>Working into one of the top team Fuji-14</li>
         <li>Completed over 4+ Industry Projects</li>
       </ul>
@@ -26,7 +26,7 @@ function Experience() {
       <h2 className="text-2xl font-semibold">
         Forntend Developer @<span className="text-teal-600">Whesper Dev</span>
       </h2>
-      <p className="text-xl ">SEP 2024 - MARCH 2025</p>
+      <p className="text-xl ">SEP 2024 - NOV 2024</p>
       <ul className="list-disc pl-5 mt-4">
         <li>
           Working as an Frontend Developer, React js, Next js, Tailwnind CSS{" "}
