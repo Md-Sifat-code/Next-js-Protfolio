@@ -50,12 +50,12 @@ const LinkedInContributions = () => {
                 "@type": "Article",
                 headline: post.title,
                 description: post.excerpt,
-                image: `https://mdsifat.site${post.image}`,
+                image: `https://sifatbinjibon.site${post.image}`,
                 author: {
                   "@type": "Person",
                   name: "Md Sifat Bin Jibon",
-                  jobTitle: "Mid level Blockchain Developer at R3 & CEO at FluvoSoft",
-                  url: "https://mdsifat.site",
+                  jobTitle: "Founder of AKINO · Mid level Blockchain Developer at R3 & CEO at FluvoSoft",
+                  url: "https://sifatbinjibon.site",
                 },
                 publisher: {
                   "@type": "Organization",

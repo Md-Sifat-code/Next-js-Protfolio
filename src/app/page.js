@@ -5,6 +5,18 @@ import WorkshopTaken from "@/Components/WorkshopTaken";
 import Experience from "@/Components/Experience";
 import LinkedInContributions from "@/Components/LinkedInContributions";
 import YouTubeSection from "@/Components/YouTubeSection";
+import { SITE_URL, SITE_DESCRIPTION } from "@/lib/seo/site";
+
+export const metadata = {
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    url: SITE_URL,
+    title: "Md Sifat Bin Jibon | Portfolio",
+    description: SITE_DESCRIPTION,
+  },
+};
 
 export default function Home() {
   return (
@@ -16,23 +28,32 @@ export default function Home() {
       <Experience />
       <LinkedInContributions />
       <YouTubeSection />
-      {/* SEO-optimized hidden content for search engines */}
       <div className="sr-only" aria-hidden="true">
-        <h2>Md Sifat Bin Jibon - Blockchain Developer in Bangladesh</h2>
+        <h1>Md Sifat Bin Jibon — Portfolio</h1>
+        <h2>Blockchain Developer in Bangladesh | R3, FluvoSoft & AKINO Founder</h2>
+        <p>{SITE_DESCRIPTION}</p>
         <p>
-          Md Sifat Bin Jibon (also known as md sifat or md sifat bin jibon) is a
-          Blockchain Developer in Bangladesh working at R3 and serving as CEO at
-          FluvoSoft. Former member of UIU Developers HUB (UIUDH) at United
-          International University (UIU), where he conducted React Orbit, Hackathon Preparation, and Interview Panel workshops. Specialized in blockchain, Corda, DLT, and
-          distributed ledger technologies. Expert in blockchain development,
-          working with R3 blockchain solutions and leading technical teams at
-          FluvoSoft. Active LinkedIn contributor sharing insights on startup strategy, blockchain infrastructure, and technology innovation in Bangladesh.
+          Md Sifat Bin Jibon (md sifat, md sifat bin jibon) works at R3 as a
+          Blockchain Developer, leads FluvoSoft as CEO, and founded AKINO
+          (akino.store), a premium clothing brand in Bangladesh with valuation
+          grown from 0 to 152,000 BDT. He conducts workshops through UIU
+          Developers HUB at United International University and publishes the
+          Start Your Online Business e-book with a free starter guide at
+          sifatbinjibon.site/ebook.
         </p>
-        <p>
-          Keywords: md sifat, md sifat bin jibon, r3, blockchain, uiu, united
-          international university, uiudh, uiu developers hub, fluvosoft, uiu
-          orbit, blockchain developer in bangladesh, drmc, linkedin posts, startup strategy, blockchain startup bangladesh, interview panel, workshop instructor, react orbit workshop, hackathon preparation workshop
-        </p>
+        <nav aria-label="Site sections">
+          <ul>
+            <li>
+              <a href={`${SITE_URL}/blog`}>Blockchain development blog</a>
+            </li>
+            <li>
+              <a href={`${SITE_URL}/ebook`}>Start Your Online Business e-book</a>
+            </li>
+            <li>
+              <a href={`${SITE_URL}/ebook/free`}>Free e-book starter guide</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </main>
   );

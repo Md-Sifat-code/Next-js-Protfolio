@@ -118,7 +118,6 @@ const WorkshopTaken = () => {
                   loading={index < 2 ? "eager" : "lazy"}
                   itemProp="image"
                   onError={(e) => {
-                    console.error("Failed to load image:", workshop.image);
                     e.target.style.opacity = "0.5";
                   }}
                 />

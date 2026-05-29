@@ -1,0 +1,111 @@
+{
+  "title": "Start Your Online Business",
+  "subtitle": "A practical guide to building, launching, and growing your business on the internet",
+  "tagline": "From zero to your first customers — without guesswork",
+  "author": "Md Sifat Bin Jibon",
+  "authorRole": "Founder of AKINO · CEO at FluvoSoft · Blockchain Developer at R3",
+  "price": {
+    "amount": "29",
+    "currency": "USD",
+    "label": "One-time purchase · Instant PDF download"
+  },
+  "purchaseUrl": "mailto:mdsifatbinjibon@gmail.com?subject=Full%20E-book%20Purchase%20-%20Start%20Your%20Online%20Business",
+  "format": "PDF · 120+ pages",
+  "updated": "2025",
+  "free": {
+    "title": "Starter Guide",
+    "tagline": "Free — no payment required",
+    "format": "PDF · 35+ pages",
+    "chaptersIncluded": "Chapters 1 & 2",
+    "pdfPath": "/ebook/start-your-online-business-free.pdf",
+    "emailGate": true,
+    "highlights": [
+      "Mindset & foundation for online business",
+      "Niche research and validation checklist",
+      "Worksheets you can use today",
+      "Upgrade anytime to unlock all 7 chapters"
+    ]
+  },
+  "highlights": [
+    "Step-by-step roadmap from idea to launch",
+    "Real frameworks used by founders and CEOs",
+    "No fluff — actionable checklists in every chapter",
+    "Works for services, products, and digital offers"
+  ],
+  "chapters": [
+    {
+      "number": "01",
+      "title": "Mindset & Foundation",
+      "description": "Why online business works, common myths, and how to pick a direction that fits your skills and goals.",
+      "free": true
+    },
+    {
+      "number": "02",
+      "title": "Find Your Niche & Validate",
+      "description": "Research demand, talk to real customers, and test ideas before you invest months building the wrong thing.",
+      "free": true
+    },
+    {
+      "number": "03",
+      "title": "Build Your Online Presence",
+      "description": "Website, brand basics, social proof, and the minimum viable setup to look credible from day one.",
+      "free": false
+    },
+    {
+      "number": "04",
+      "title": "Products, Services & Offers",
+      "description": "Choose what to sell, price it right, and package your offer so people understand the value immediately.",
+      "free": false
+    },
+    {
+      "number": "05",
+      "title": "Marketing on a Small Budget",
+      "description": "Content, outreach, email, and organic growth — strategies that work without burning cash on ads.",
+      "free": false
+    },
+    {
+      "number": "06",
+      "title": "Sales, Delivery & Support",
+      "description": "Convert visitors into buyers, deliver consistently, and build trust that turns customers into advocates.",
+      "free": false
+    },
+    {
+      "number": "07",
+      "title": "Systems, Tools & Scale",
+      "description": "Automate repetitive work, measure what matters, and grow without losing quality or burning out.",
+      "free": false
+    }
+  ],
+  "audience": [
+    "Students and graduates exploring entrepreneurship",
+    "Freelancers ready to productize their skills",
+    "Side-hustlers who want a clear launch plan",
+    "Founders building their first online brand"
+  ],
+  "faq": [
+    {
+      "question": "What's included in the free version?",
+      "answer": "The free Starter Guide covers Chapters 1 and 2 — mindset, foundation, niche finding, and validation. Enter your email on the free download page to unlock the PDF instantly. You can also read a preview online without signing up."
+    },
+    {
+      "question": "What's the difference between free and full?",
+      "answer": "The free Starter Guide (Chapters 1–2) helps you choose a direction and validate demand. The full e-book adds five more chapters on building your presence, offers, marketing, sales, and scaling — the complete launch playbook."
+    },
+    {
+      "question": "Do I need technical skills?",
+      "answer": "No. The guide focuses on business fundamentals, tools anyone can use, and decisions that don't require coding. Technical readers will still find practical value in the systems chapter."
+    },
+    {
+      "question": "What format is the e-book?",
+      "answer": "Both free and full versions are high-quality PDFs you can read on any device. The free guide is available instantly; the full guide is delivered after purchase."
+    },
+    {
+      "question": "Is this only for Bangladesh?",
+      "answer": "The principles apply globally. Examples draw from real experience building online — relevant whether you're local or international."
+    },
+    {
+      "question": "Can I get a refund on the full e-book?",
+      "answer": "If the full guide isn't what you expected, contact me within 7 days of purchase and I'll make it right."
+    }
+  ]
+}

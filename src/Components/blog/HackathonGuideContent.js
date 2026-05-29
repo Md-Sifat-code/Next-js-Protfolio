@@ -726,8 +726,7 @@ async function fetchData() {
     const data = await response.json();
     return data;
   } catch (error) {
-    console.error('API Error:', error);
-    // Fallback to mock data
+    // Handle error; fallback to mock data
     return mockData;
   }
 }`}</pre>

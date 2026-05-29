@@ -1,6 +1,6 @@
 // next-sitemap.js
 module.exports = {
-  siteUrl: "https://mdsifat.site", // Change site URL to your domain
+  siteUrl: "https://sifatbinjibon.site", // Change site URL to your domain
   generateRobotsTxt: true, // Enable robots.txt generation
   changefreq: "monthly", // Set default changefreq for all pages
   priority: 0.7, // Default priority for all pages

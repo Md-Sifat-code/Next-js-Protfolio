@@ -59,14 +59,14 @@ export default function BlogPost() {
             "@type": "BlogPosting",
             headline: post.title,
             description: post.description,
-            image: "https://mdsifat.site/profpic.jpg",
+            image: "https://sifatbinjibon.site/profpic.jpg",
             datePublished: post.dateISO,
             dateModified: post.dateISO,
             author: {
               "@type": "Person",
               name: post.author,
               jobTitle: post.authorRole,
-              url: "https://mdsifat.site",
+              url: "https://sifatbinjibon.site",
               sameAs: [
                 "https://www.linkedin.com/in/mdsifatbinjibon/",
                 "https://github.com/Md-Sifat-Bin-Jibon",
@@ -75,15 +75,15 @@ export default function BlogPost() {
             publisher: {
               "@type": "Organization",
               name: "Md Sifat Bin Jibon",
-              url: "https://mdsifat.site",
+              url: "https://sifatbinjibon.site",
               logo: {
                 "@type": "ImageObject",
-                url: "https://mdsifat.site/profpic.jpg",
+                url: "https://sifatbinjibon.site/profpic.jpg",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://mdsifat.site/blog/${post.id}`,
+              "@id": `https://sifatbinjibon.site/blog/${post.id}`,
             },
             articleSection: post.category,
             keywords: post.keywords.join(", "),
@@ -129,19 +129,19 @@ export default function BlogPost() {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://mdsifat.site",
+                item: "https://sifatbinjibon.site",
               },
               {
                 "@type": "ListItem",
                 position: 2,
                 name: "Blog",
-                item: "https://mdsifat.site/blog",
+                item: "https://sifatbinjibon.site/blog",
               },
               {
                 "@type": "ListItem",
                 position: 3,
                 name: post.title,
-                item: `https://mdsifat.site/blog/${post.id}`,
+                item: `https://sifatbinjibon.site/blog/${post.id}`,
               },
             ],
           }),
@@ -279,7 +279,7 @@ export default function BlogPost() {
               "@type": "HowTo",
               name: "How to Get Started with Blockchain Development",
               description: "Step-by-step guide to learning blockchain development from basics to building your first project",
-              image: "https://mdsifat.site/profpic.jpg",
+              image: "https://sifatbinjibon.site/profpic.jpg",
               totalTime: "PT15M",
               estimatedCost: {
                 "@type": "MonetaryAmount",
@@ -325,7 +325,7 @@ export default function BlogPost() {
               "@type": "HowTo",
               name: "How to Prepare for and Win Hackathons",
               description: "Complete step-by-step guide to hackathon success from preparation to execution and follow-up",
-              image: "https://mdsifat.site/profpic.jpg",
+              image: "https://sifatbinjibon.site/profpic.jpg",
               totalTime: "PT48H",
               estimatedCost: {
                 "@type": "MonetaryAmount",
@@ -439,7 +439,7 @@ export default function BlogPost() {
           <div className="flex flex-wrap gap-4 justify-center mb-8">
             <span className="text-sm text-gray-600">Share this article:</span>
             <a
-              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://mdsifat.site/blog/${post.id}`)}`}
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://sifatbinjibon.site/blog/${post.id}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#dfb425] hover:underline"
@@ -447,7 +447,7 @@ export default function BlogPost() {
               Twitter
             </a>
             <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://mdsifat.site/blog/${post.id}`)}`}
+              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://sifatbinjibon.site/blog/${post.id}`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-[#dfb425] hover:underline"

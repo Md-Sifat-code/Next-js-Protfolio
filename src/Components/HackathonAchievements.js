@@ -124,7 +124,6 @@ const HackathonAchievements = () => {
                   loading={index < 4 ? "eager" : "lazy"}
                   itemProp="image"
                   onError={(e) => {
-                    console.error("Failed to load image:", achievement.image);
                     e.target.style.opacity = "0.5";
                   }}
                 />
@@ -166,7 +165,7 @@ const HackathonAchievements = () => {
               <meta itemProp="actionStatus" content="CompletedActionStatus" />
               <meta
                 itemProp="agent"
-                content="https://mdsifat.site"
+                content="https://sifatbinjibon.site"
                 itemType="https://schema.org/Person"
               />
             </article>

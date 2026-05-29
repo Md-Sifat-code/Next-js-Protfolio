@@ -5,20 +5,29 @@ import "./globals.css";
 import FollowCursor from "../Components/FollowCursor";
 import Navbar from "@/Components/Navbar";
 import { Analytics } from "@vercel/analytics/next";
+import FirebaseAnalytics from "@/Components/FirebaseAnalytics";
+import {
+  SITE_URL,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  DEFAULT_OG_IMAGE,
+  SOCIAL,
+  absoluteUrl,
+} from "@/lib/seo/site";
 
 const geist = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://mdsifat.site"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & FluvoSoft",
-    template: "%s | Md Sifat Bin Jibon - Blockchain Developer in Bangladesh",
+    default: SITE_TITLE,
+    template: "%s | Md Sifat Bin Jibon",
   },
-  description:
-    "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CEO at FluvoSoft and Mid level Blockchain Developer at R3. Former UIU Developers HUB member, conducted React Orbit and Hackathon Preparation workshops at United International University (UIU). Specialized in Corda, DLT, and blockchain solutions.",
+  description: SITE_DESCRIPTION,
   applicationName: "Md Sifat Portfolio",
-  authors: [{ name: "Md Sifat Bin Jibon", url: "https://mdsifat.site" }],
+  authors: [{ name: "Md Sifat Bin Jibon", url: "https://sifatbinjibon.site" }],
   keywords: [
     "md sifat",
     "md sifat bin jibon",
@@ -38,6 +47,13 @@ export const metadata = {
     "UIU Developers HUB",
     "fluvosoft",
     "FluvoSoft",
+    "akino",
+    "AKINO",
+    "akino.store",
+    "AKINO clothing",
+    "AKINO founder",
+    "clothing brand Bangladesh",
+    "men's fashion Bangladesh",
     "uiu orbit",
     "UIU Orbit",
     "React Orbit",
@@ -71,9 +87,16 @@ export const metadata = {
     "workshop instructor",
     "UIU workshop",
     "educational workshops",
+    "start your online business",
+    "online business ebook",
+    "entrepreneurship ebook",
+    "start business online Bangladesh",
+    "sifatbinjibon",
+    "sifatbinjibon.site",
+    "Md Sifat ebook",
   ].join(", "),
   alternates: {
-    canonical: "https://mdsifat.site",
+    canonical: SITE_URL,
   },
   robots: {
     index: true,
@@ -87,29 +110,27 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & FluvoSoft",
-    description:
-      "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh working at R3 and CEO at FluvoSoft. Former UIU Developers HUB member, conducted workshops at United International University (UIU). Expert in Corda, DLT, and blockchain solutions.",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
     type: "website",
-    locale: "en",
-    url: "https://mdsifat.site",
-    siteName: "Md Sifat Bin Jibon Portfolio",
+    locale: "en_US",
+    url: SITE_URL,
+    siteName: `${SITE_NAME} Portfolio`,
     images: [
       {
-        url: "/profpic.jpg",
-        width: 800,
-        height: 800,
-        alt: "Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft",
+        url: DEFAULT_OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "Md Sifat Bin Jibon - Blockchain Developer, CEO at FluvoSoft, Founder of AKINO",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & FluvoSoft",
-    description:
-      "Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft. Former UIU Developers HUB member. Expert in Corda, DLT, and blockchain solutions.",
-    creator: "@md_sifat",
-    images: ["/profpic.jpg"],
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    creator: SOCIAL.twitter,
+    images: [DEFAULT_OG_IMAGE],
   },
 };
 
@@ -122,20 +143,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" data-theme="light">
       <head>
-        {/* Canonical */}
-        <link rel="canonical" href="https://mdsifat.site" />
-        {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        {/* Fonts */}
-        {/* Removed external Google Fonts (using next/font instead for performance) */}
-        {/* Theme Color */}
         <meta name="theme-color" content="#0D47A1" />
-        {/* Robots */}
-        <meta name="robots" content="index,follow,max-image-preview:large" />
-        {/* Social images are configured via Next.js metadata above */}
-        {/* rel=me for identity linking */}
-        <link rel="me" href="https://www.linkedin.com/in/mdsifatbinjibon/" />
-        <link rel="me" href="https://github.com/Md-Sifat-Bin-Jibon" />
+        <link rel="me" href={SOCIAL.linkedin} />
+        <link rel="me" href={SOCIAL.github} />
+        <link rel="me" href={SOCIAL.akino} />
         {/* Apple Web App */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -151,14 +163,10 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               name: "Md Sifat Bin Jibon",
               alternateName: ["Md Sifat", "md sifat", "md sifat bin jibon"],
-              url: "https://mdsifat.site",
-              image: "https://mdsifat.site/profpic.jpg",
-              description:
-                "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CEO at FluvoSoft and Mid level Blockchain Developer at R3. Former UIU Developers HUB member, conducted React Orbit and Hackathon Preparation workshops at United International University (UIU). Specialized in Corda, DLT, and blockchain solutions.",
-              sameAs: [
-                "https://www.linkedin.com/in/mdsifatbinjibon/",
-                "https://github.com/Md-Sifat-Bin-Jibon",
-              ],
+              url: SITE_URL,
+              image: absoluteUrl(DEFAULT_OG_IMAGE),
+              description: SITE_DESCRIPTION,
+              sameAs: [SOCIAL.linkedin, SOCIAL.github, SOCIAL.akino],
               jobTitle: "Blockchain Developer & Software Engineer",
               worksFor: [
                 {
@@ -177,7 +185,21 @@ export default function RootLayout({ children }) {
                     "@type": "Person",
                     name: "Md Sifat Bin Jibon",
                   },
-                  employeeType: "CTO",
+                  employeeType: "CEO",
+                },
+                {
+                  "@type": "Organization",
+                  name: "AKINO",
+                  alternateName: ["akino", "AKINO clothing"],
+                  url: "https://www.akino.store",
+                  sameAs: "https://www.akino.store",
+                  description:
+                    "AKINO is a premium men's fashion and clothing brand in Bangladesh offering oversized tees, drop-shoulder streetwear, couple sets, and women's wear.",
+                  founder: {
+                    "@type": "Person",
+                    name: "Md Sifat Bin Jibon",
+                  },
+                  areaServed: "Bangladesh",
                 },
               ],
               alumniOf: [
@@ -217,6 +239,9 @@ export default function RootLayout({ children }) {
                 "React",
                 "Next.js",
                 "Frontend Development",
+                "E-commerce",
+                "Fashion",
+                "Clothing brand",
               ],
               address: {
                 "@type": "PostalAddress",
@@ -227,7 +252,7 @@ export default function RootLayout({ children }) {
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer support",
-                email: "codewithsifat4@gmail.com",
+                email: SOCIAL.email,
               },
               hasCredential: [
                 {
@@ -260,14 +285,25 @@ export default function RootLayout({ children }) {
               "@type": "WebSite",
               name: "Md Sifat Bin Jibon Portfolio",
               alternateName: ["Md Sifat Portfolio", "md sifat portfolio"],
-              url: "https://mdsifat.site",
-              description:
-                "Portfolio of Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft. Former UIU Developers HUB member.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://mdsifat.site/?q={search_term_string}",
-                "query-input": "required name=search_term_string",
+              url: SITE_URL,
+              description: SITE_DESCRIPTION,
+              publisher: {
+                "@type": "Person",
+                name: SITE_NAME,
+                url: SITE_URL,
               },
+              hasPart: [
+                {
+                  "@type": "WebPage",
+                  name: "Blog",
+                  url: `${SITE_URL}/blog`,
+                },
+                {
+                  "@type": "WebPage",
+                  name: "Start Your Online Business E-book",
+                  url: `${SITE_URL}/ebook`,
+                },
+              ],
             }),
           }}
         />
@@ -312,6 +348,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Analytics />
+        <FirebaseAnalytics />
       </body>
     </html>
   );

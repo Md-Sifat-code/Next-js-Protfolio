@@ -1,4 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://mdsifat.site/sitemap.xml
+Sitemap: https://sifatbinjibon.site/sitemap.xml

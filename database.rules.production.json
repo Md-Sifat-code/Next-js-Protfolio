@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": false,
+    "ebookLeads": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

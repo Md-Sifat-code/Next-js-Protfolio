@@ -2,6 +2,19 @@ import React from "react";
 
 const experiences = [
   {
+    company: "AKINO",
+    role: "Founder",
+    location: "Bangladesh",
+    period: "Present",
+    url: "https://www.akino.store",
+    linkLabel: "akino.store",
+    points: [
+      "Founded AKINO — a Bangladesh-based premium men's fashion and clothing brand (akino.store).",
+      "Built the label from zero to ৳152,000 brand valuation through product design, e-commerce, and customer growth.",
+      "Product lines include oversized drop-shoulder tees, couple sets, women's wear, and summer essentials.",
+    ],
+  },
+  {
     company: "R3",
     role: "Mid level Blockchain Developer",
     location: "",
@@ -63,9 +76,18 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
-            As a <span className="font-semibold">Blockchain Developer in Bangladesh</span>, I've worked with leading organizations like{" "}
+            As a <span className="font-semibold">Blockchain Developer in Bangladesh</span>, I&apos;ve worked with{" "}
             <span className="font-semibold">R3</span> and{" "}
-            <span className="font-semibold">FluvoSoft</span>, delivering impact across the blockchain and software development stack.
+            <span className="font-semibold">FluvoSoft</span>, and founded{" "}
+            <a
+              href="https://www.akino.store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-blue-600 hover:underline"
+            >
+              AKINO
+            </a>
+            , growing a Bangladesh clothing brand from ৳0 to ৳152k valuation.
           </p>
         </div>
 
@@ -90,9 +112,10 @@ const Experience = () => {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 border border-blue-200 hover:bg-blue-100"
-                          title="View company on LinkedIn"
+                          title={exp.linkLabel || "View on LinkedIn"}
                         >
-                          LinkedIn <span aria-hidden>↗</span>
+                          {exp.linkLabel || "LinkedIn"}{" "}
+                          <span aria-hidden>↗</span>
                         </a>
                       ) : null}
                     </p>

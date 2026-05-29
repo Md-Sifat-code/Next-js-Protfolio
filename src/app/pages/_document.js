@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
       <Html lang="en" data-theme="light">
         <Head>
           {/* Canonical */}
-          <link rel="canonical" href="https://mdsifat.site" />
+          <link rel="canonical" href="https://sifatbinjibon.site" />
           {/* Favicon */}
           <link rel="icon" href="/favicon.ico" sizes="any" />
           {/* Preconnects for fonts */}

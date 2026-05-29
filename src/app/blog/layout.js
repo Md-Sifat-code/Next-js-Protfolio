@@ -1,7 +1,9 @@
+import { SITE_URL, absoluteUrl, DEFAULT_OG_IMAGE, SOCIAL } from "@/lib/seo/site";
+
 export const metadata = {
-  title: "Blog | Blockchain Development Guides & Tutorials | Md Sifat Bin Jibon",
+  title: "Blockchain Development Blog",
   description:
-    "Read comprehensive guides on blockchain development, smart contracts, dApp development, Corda, Ethereum, and blockchain tutorials. Written by Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft.",
+    "Guides on blockchain development, smart contracts, dApps, Corda, and Ethereum by Md Sifat Bin Jibon — R3 Blockchain Developer, FluvoSoft CEO, and AKINO founder.",
   keywords: [
     "blockchain development blog",
     "blockchain development guides",
@@ -20,11 +22,11 @@ export const metadata = {
     title: "Blog | Blockchain Development Guides | Md Sifat Bin Jibon",
     description:
       "Comprehensive blockchain development guides, tutorials, and articles. Learn smart contracts, dApps, and blockchain programming from an experienced developer.",
-    url: "https://mdsifat.site/blog",
+    url: `${SITE_URL}/blog`,
     siteName: "Md Sifat Bin Jibon - Blockchain Developer",
     images: [
       {
-        url: "https://mdsifat.site/profpic.jpg",
+        url: absoluteUrl(DEFAULT_OG_IMAGE),
         width: 1200,
         height: 630,
         alt: "Md Sifat Bin Jibon - Blockchain Development Blog",
@@ -39,10 +41,11 @@ export const metadata = {
     description:
       "Comprehensive blockchain development guides and tutorials for beginners and advanced developers.",
     creator: "@md_sifat",
-    images: ["https://mdsifat.site/profpic.jpg"],
+    images: [absoluteUrl(DEFAULT_OG_IMAGE)],
+    creator: SOCIAL.twitter,
   },
   alternates: {
-    canonical: "https://mdsifat.site/blog",
+    canonical: `${SITE_URL}/blog`,
   },
   robots: {
     index: true,
@@ -70,17 +73,19 @@ export default function BlogLayout({ children }) {
             name: "Md Sifat Bin Jibon - Blockchain Development Blog",
             description:
               "Comprehensive guides on blockchain development, smart contracts, and dApp development",
-            url: "https://mdsifat.site/blog",
+            url: `${SITE_URL}/blog`,
             author: {
               "@type": "Person",
               name: "Md Sifat Bin Jibon",
-              jobTitle: "Mid level Blockchain Developer at R3 & CEO at FluvoSoft",
-              url: "https://mdsifat.site",
+              jobTitle:
+                "Founder of AKINO · Mid level Blockchain Developer at R3 & CEO at FluvoSoft",
+              url: SITE_URL,
+              sameAs: [SOCIAL.linkedin, SOCIAL.github, SOCIAL.akino],
             },
             publisher: {
-              "@type": "Organization",
+              "@type": "Person",
               name: "Md Sifat Bin Jibon",
-              url: "https://mdsifat.site",
+              url: SITE_URL,
             },
             inLanguage: "en-US",
             about: {

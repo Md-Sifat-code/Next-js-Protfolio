@@ -47,7 +47,7 @@ function Hero() {
             <div className="relative w-32 h-32">
               <Image
                 src="/profpic.jpg"
-                alt="Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft, Former UIU Developers HUB member"
+                alt="Md Sifat Bin Jibon - Blockchain Developer at R3, CEO at FluvoSoft, Founder of AKINO, Former UIU Developers HUB member"
                 fill
                 sizes="128px"
                 priority
@@ -78,8 +78,17 @@ function Hero() {
                 : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="inline-block bg-gray-100 text-black px-4 py-2 rounded-lg text-lg font-medium">
-              Mid level Blockchain Developer at R3 and CEO at FluvoSoft
+            <div className="inline-block bg-gray-100 text-black px-4 py-2 rounded-lg text-base md:text-lg font-medium max-w-xl">
+              Mid level Blockchain Developer at R3 · CEO at FluvoSoft · Founder
+              of{" "}
+              <a
+                href="https://www.akino.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline font-semibold"
+              >
+                AKINO
+              </a>
             </div>
           </div>
 
@@ -100,10 +109,22 @@ function Hero() {
               technologies and enterprise solutions. As a{" "}
               <span className="font-bold text-blue-600">Blockchain Developer</span>{" "}
               at <span className="font-semibold">R3</span>, I build innovative
-              Corda-based applications,               while as CEO at{" "}
+              Corda-based applications, while as CEO at{" "}
               <span className="font-semibold">FluvoSoft</span>, I lead
-              technical strategy and drive digital transformation initiatives. As
-              a former member of{" "}
+              technical strategy and drive digital transformation initiatives.
+              As founder of{" "}
+              <a
+                href="https://www.akino.store"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-blue-600 hover:underline"
+              >
+                AKINO
+              </a>
+              , a premium clothing brand in Bangladesh, I grew brand valuation
+              from ৳0 to ৳152,000 through men&apos;s fashion, oversized
+              streetwear, and our online store at akino.store. As a former member
+              of{" "}
               <span className="font-semibold">UIU Developers HUB</span> at{" "}
               <span className="font-semibold">United International University (UIU)</span>
               , I conducted React Orbit and Hackathon Preparation workshops. I
@@ -121,11 +142,11 @@ function Hero() {
             }`}
           >
             <a
-              href="mailto:codewithsifat4@gmail.com"
+              href="mailto:mdsifatbinjibon@gmail.com"
               className="inline-flex items-center gap-2 bg-gray-100 hover:bg-gray-200 text-black px-6 py-3 rounded-lg transition-all duration-300 font-medium"
             >
               <MdEmail size={20} />
-              codewithsifat4@gmail.com
+              mdsifatbinjibon@gmail.com
             </a>
           </div>
 
@@ -177,7 +198,7 @@ function Hero() {
               <FaCode size={24} />
             </a>
             <a
-              href="mailto:codewithsifat4@gmail.com"
+              href="mailto:mdsifatbinjibon@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-red-600 hover:text-red-800 transition-colors duration-300 p-2 hover:bg-red-50 rounded-lg"

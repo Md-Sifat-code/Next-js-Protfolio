@@ -62,7 +62,16 @@ export default function BlogPage() {
           </h1>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Comprehensive guides, tutorials, and insights on blockchain development, smart contracts, dApps, and blockchain technology. Written by{" "}
-            <strong className="text-black">Md Sifat Bin Jibon</strong>, Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft.
+            <strong className="text-black">Md Sifat Bin Jibon</strong>, Blockchain Developer at R3, CEO at FluvoSoft, and Founder of{" "}
+            <a
+              href="https://www.akino.store"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline font-semibold"
+            >
+              AKINO
+            </a>
+            .
           </p>
         </header>
 

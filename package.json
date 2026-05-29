@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",
+    "firebase": "^12.14.0",
+    "firebase-admin": "^13.10.0",
     "next": "16.0.7",
     "next-sitemap": "^4.2.3",
     "react": "19.2.1",

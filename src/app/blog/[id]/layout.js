@@ -1,5 +1,5 @@
-import { Metadata } from "next";
 import blogPostsData from "@/data/blogPosts.json";
+import { SITE_URL, absoluteUrl, DEFAULT_OG_IMAGE } from "@/lib/seo/site";
 
 // Convert array to object for easier lookup
 const blogPosts = {};
@@ -18,8 +18,8 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  const url = `https://mdsifat.site/blog/${postId}`;
-  const imageUrl = `https://mdsifat.site/profpic.jpg`;
+  const url = `${SITE_URL}/blog/${postId}`;
+  const imageUrl = absoluteUrl(DEFAULT_OG_IMAGE);
 
   const isHackathonPost = postId === 4;
   const titleSuffix = isHackathonPost 
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
     title: `${post.title} | ${titleSuffix}`,
     description: post.description,
     keywords: post.keywords.join(", "),
-    authors: [{ name: post.author, url: "https://mdsifat.site" }],
+    authors: [{ name: post.author, url: SITE_URL }],
     openGraph: {
       title: `${post.title} | ${ogTitleSuffix}`,
       description: post.description,
