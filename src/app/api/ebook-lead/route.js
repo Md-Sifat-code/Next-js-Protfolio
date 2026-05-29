@@ -1,4 +1,8 @@
 import { saveEbookLead, isFirebaseConfigured } from "@/lib/firebaseAdmin";
+import {
+  isDatabaseUrlConfigured,
+  saveLeadViaRest,
+} from "@/lib/firebaseRest";
 import { normalizeEmail } from "@/lib/security/email";
 import { checkRateLimit } from "@/lib/security/rateLimit";
 import { getClientIp, hasValidOrigin } from "@/lib/security/request";
@@ -9,10 +13,6 @@ const MAX_BODY_BYTES = 1024;
 
 export async function POST(request) {
   try {
-    if (request.method !== "POST") {
-      return Response.json({ error: "Method not allowed" }, { status: 405 });
-    }
-
     const contentLength = Number(request.headers.get("content-length") || 0);
     if (contentLength > MAX_BODY_BYTES) {
       return Response.json({ error: "Request too large" }, { status: 413 });
@@ -57,23 +57,19 @@ export async function POST(request) {
       );
     }
 
-    if (!isFirebaseConfigured()) {
-      if (process.env.EBOOK_INSECURE_CLIENT_FALLBACK === "true") {
-        return Response.json(
-          { error: "Use client fallback", fallback: "client" },
-          { status: 503 }
-        );
-      }
+    if (isFirebaseConfigured()) {
+      await saveEbookLead({ email });
+    } else if (isDatabaseUrlConfigured()) {
+      await saveLeadViaRest({ email });
+    } else {
       return Response.json(
         {
           error:
-            "Download is temporarily unavailable. Please try again later.",
+            "Server is missing Firebase config. Add FIREBASE_DATABASE_URL (or NEXT_PUBLIC_FIREBASE_DATABASE_URL) in Vercel, then redeploy.",
         },
         { status: 503 }
       );
     }
-
-    await saveEbookLead({ email });
 
     return Response.json(
       { success: true },
@@ -85,7 +81,7 @@ export async function POST(request) {
     );
   } catch {
     return Response.json(
-      { error: "Something went wrong. Please try again." },
+      { error: "Could not save your email. Please try again." },
       { status: 500 }
     );
   }
